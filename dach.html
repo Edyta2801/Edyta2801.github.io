@@ -6,27 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dach</title>
     <script type="text/javascript">
-      piAId = "591293";
-      piCId = "436130";
-      piHostname = "pi.demo.pardot.com";
-
-      (function () {
-        function async_load() {
-          var s = document.createElement("script");
-          s.type = "text/javascript";
-          s.src =
-            ("https:" == document.location.protocol
-              ? "https://pi"
-              : "http://cdn") + ".pardot.com/pd.js";
-          var c = document.getElementsByTagName("script")[0];
-          c.parentNode.insertBefore(s, c);
-        }
-        if (window.attachEvent) {
-          window.attachEvent("onload", async_load);
-        } else {
-          window.addEventListener("load", async_load, false);
-        }
-      })();
+      var iframe = document.getElementById("myiframe");
+      iframe.src = iframe.src + window.location.search;
     </script>
   </head>
   <body>
@@ -45,10 +26,7 @@
       ></iframe>
     </div>
 
-    <script type="text/javascript">
-      var iframe = document.getElementById("myiframe");
-      iframe.src = iframe.src + window.location.search;
-    </script>
+   
 
     <script type="text/javascript">
       // Parse the URL
